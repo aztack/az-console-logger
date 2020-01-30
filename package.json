@@ -1,0 +1,44 @@
+{
+  "name": "az-console-logger",
+  "version": "1.0.0",
+  "description": "A console logger",
+  "main": "dist/index.js",
+  "scripts": {
+    "init": "npm i --verbose",
+    "start": "tsc -w",
+    "build": "tsc",
+    "lint-staged": "lint-staged",
+    "lint-fix": "node node_modules/tslint/bin/tslint --fix"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,d.ts}": [
+      "npm run lint-fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aztack/az-console-logger.git"
+  },
+  "keywords": [
+    "console",
+    "logger",
+    "level"
+  ],
+  "author": "aztack@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aztack/az-console-logger/issues"
+  },
+  "homepage": "https://github.com/aztack/az-console-logger#readme",
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
+  }
+}
